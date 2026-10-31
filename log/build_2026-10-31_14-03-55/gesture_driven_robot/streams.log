@@ -1,0 +1,22 @@
+[0.443s] Invoking command in '/home/navya/Gesture-Driven-Robot': PYTHONPATH=/home/navya/Gesture-Driven-Robot/build/gesture_driven_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/navya/Gesture-Driven-Robot/install/gesture_driven_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/gesture_driven_robot build --build-base /home/navya/Gesture-Driven-Robot/build/gesture_driven_robot/build install --record /home/navya/Gesture-Driven-Robot/build/gesture_driven_robot/install.log --install-scripts $base/lib/gesture_driven_robot --single-version-externally-managed install_data
+[0.612s] running egg_info
+[0.612s] writing build/gesture_driven_robot/gesture_driven_robot.egg-info/PKG-INFO
+[0.613s] writing dependency_links to build/gesture_driven_robot/gesture_driven_robot.egg-info/dependency_links.txt
+[0.613s] writing entry points to build/gesture_driven_robot/gesture_driven_robot.egg-info/entry_points.txt
+[0.613s] writing requirements to build/gesture_driven_robot/gesture_driven_robot.egg-info/requires.txt
+[0.613s] writing top-level names to build/gesture_driven_robot/gesture_driven_robot.egg-info/top_level.txt
+[0.614s] reading manifest file 'build/gesture_driven_robot/gesture_driven_robot.egg-info/SOURCES.txt'
+[0.614s] writing manifest file 'build/gesture_driven_robot/gesture_driven_robot.egg-info/SOURCES.txt'
+[0.614s] running build
+[0.614s] running build_py
+[0.614s] running install
+[0.614s] running install_lib
+[0.615s] running install_data
+[0.615s] running install_egg_info
+[0.616s] removing '/home/navya/Gesture-Driven-Robot/install/gesture_driven_robot/lib/python3.10/site-packages/gesture_driven_robot-0.0.0-py3.10.egg-info' (and everything under it)
+[0.617s] Copying build/gesture_driven_robot/gesture_driven_robot.egg-info to /home/navya/Gesture-Driven-Robot/install/gesture_driven_robot/lib/python3.10/site-packages/gesture_driven_robot-0.0.0-py3.10.egg-info
+[0.617s] running install_scripts
+[0.630s] Installing control_node script to /home/navya/Gesture-Driven-Robot/install/gesture_driven_robot/lib/gesture_driven_robot
+[0.630s] Installing vision_node script to /home/navya/Gesture-Driven-Robot/install/gesture_driven_robot/lib/gesture_driven_robot
+[0.630s] writing list of installed files to '/home/navya/Gesture-Driven-Robot/build/gesture_driven_robot/install.log'
+[0.645s] Invoked command in '/home/navya/Gesture-Driven-Robot' returned '0': PYTHONPATH=/home/navya/Gesture-Driven-Robot/build/gesture_driven_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/navya/Gesture-Driven-Robot/install/gesture_driven_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/gesture_driven_robot build --build-base /home/navya/Gesture-Driven-Robot/build/gesture_driven_robot/build install --record /home/navya/Gesture-Driven-Robot/build/gesture_driven_robot/install.log --install-scripts $base/lib/gesture_driven_robot --single-version-externally-managed install_data

@@ -1,12 +1,14 @@
-import cv2
+import os
 import time
 import math
+import cv2
 from ultralytics import YOLO
 
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Point
 from std_msgs.msg import Bool
+from ament_index_python.packages import get_package_share_directory
 
 
 class VisionNode(Node):
@@ -14,15 +16,22 @@ class VisionNode(Node):
     def __init__(self):
         super().__init__('vision_node')
 
-        self.MODEL_PATH    = 'best.pt'
+        # 1. Resolve model path FIRST
+        try:
+            pkg_share = get_package_share_directory('gesture_driven_robot')
+            self.MODEL_PATH = os.path.join(pkg_share, 'best.pt')
+        except Exception:
+            self.MODEL_PATH = 'best.pt'
+
         self.CAM_INDEX     = 0
         self.ALPHA         = 0.15  
         self.MIN_MOVE_PX   = 3.0   
         self.STILL_TIMEOUT = 0.8    
 
-        self.pub_pos    = self.create_publisher(Point, '/finger_pos',    10)
-        self.pub_moving = self.create_publisher(Bool,  '/finger_moving', 10)
+        self.pub_pos    = self.create_publisher(Point, '/finger_pos', 10)
+        self.pub_moving = self.create_publisher(Bool, '/finger_moving', 10)
 
+        # 2. Load YOLO with resolved path
         self.get_logger().info(f'Loading YOLO: {self.MODEL_PATH}')
         self.model = YOLO(self.MODEL_PATH)
 
@@ -95,7 +104,8 @@ class VisionNode(Node):
         else:
             if time.time() - self.last_move_time > self.STILL_TIMEOUT:
                 self.is_moving = False
-                flag = Bool(); flag.data = False
+                flag = Bool()
+                flag.data = False
                 self.pub_moving.publish(flag)
 
         for i in range(1, len(self.trail)):
@@ -115,6 +125,7 @@ class VisionNode(Node):
         cv2.destroyAllWindows()
         super().destroy_node()
 
+
 def main(args=None):
     rclpy.init(args=args)
     node = VisionNode()
@@ -125,6 +136,7 @@ def main(args=None):
     finally:
         node.destroy_node()
         rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()

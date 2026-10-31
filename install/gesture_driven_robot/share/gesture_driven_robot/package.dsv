@@ -1,0 +1,12 @@
+source;share/gesture_driven_robot/hook/path.ps1
+source;share/gesture_driven_robot/hook/path.dsv
+source;share/gesture_driven_robot/hook/path.sh
+source;share/gesture_driven_robot/hook/pythonpath.ps1
+source;share/gesture_driven_robot/hook/pythonpath.dsv
+source;share/gesture_driven_robot/hook/pythonpath.sh
+source;share/gesture_driven_robot/hook/pythonscriptspath.ps1
+source;share/gesture_driven_robot/hook/pythonscriptspath.dsv
+source;share/gesture_driven_robot/hook/pythonscriptspath.sh
+source;share/gesture_driven_robot/hook/ament_prefix_path.ps1
+source;share/gesture_driven_robot/hook/ament_prefix_path.dsv
+source;share/gesture_driven_robot/hook/ament_prefix_path.sh
